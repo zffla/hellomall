@@ -1,0 +1,10 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": {
+    "userId": 1,
+    "name": "FF",
+    "avatar": "https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/96dda144ad3459827a8b4b4407f431adcaef84e7.jpg",
+    "address": "大连"
+  }
+}

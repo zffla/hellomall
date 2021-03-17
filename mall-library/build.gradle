@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.3"
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //解析返回的字符串
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    //导入加载图标库
+    api 'com.wang.avi:library:2.1.3'
+    //工具库
+    api 'com.blankj:utilcodex:1.30.5'
+    api 'me.yokeyword:fragmentationx:1.0.2'
+    //字体图标
+    api('com.joanzapata.iconify:android-iconify-ionicons:2.2.2', {
+        exclude group: 'com.android.support'
+    })
+    api('com.joanzapata.iconify:android-iconify-fontawesome:2.2.2', {
+        exclude group: 'com.android.support'
+    })
+    //RecyclerView依赖
+    api 'androidx.recyclerview:recyclerview:1.1.0'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+//    api 'com.github.fondesa:recycler-view-divider:6.8.3'
+    //轮播图依赖
+    api 'com.youth.banner:banner:2.1.0'
+    //图片加载库
+    api 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+    api 'com.alibaba:fastjson:1.1.72.android'
+}
