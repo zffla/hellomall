@@ -1,4 +1,4 @@
-# hellomall
+# Helloall
 基于Kotlin的简易版电商购物商城
 
 ## 功能介绍
