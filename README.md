@@ -11,5 +11,6 @@
 展示当前已加购商品，类似淘宝购物车界面，可全选计算价格、清空、删除等。结算功能有待完善。
 ### 个人中心
 个人信息、收货地址设置以及我的收藏功能。
+![image](https://github.com/zffla/hellomall/blob/main/%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83.jpg)
 ## 具体实现
 
